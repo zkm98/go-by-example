@@ -26,6 +26,12 @@ func get_data() int{
 	return guess
 }
 
+func scnf_get_data() int{
+	var data int
+	fmt.Scan(&data)
+	return data
+}
+
 func main() {
 	maxNum := 100
 	rand.Seed(time.Now().UnixNano())
@@ -34,7 +40,7 @@ func main() {
 
 	fmt.Println("Please input your guess")
 	for {
-		guess := get_data()
+		guess := scnf_get_data()
 		fmt.Println("You guess is", guess)
 		if guess > secretNumber {
 			fmt.Println("Your guess is bigger than the secret number. Please try again")
